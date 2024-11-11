@@ -106,7 +106,7 @@ Use a deepfake model like DeepFaceLab or Faceswap to train on the aligned faces.
 
 ### Step 6: Generate Deepfake Frames
 
-```python 
+```python
 # This is a placeholder for generating deepfake frames
 # You would use the trained model to generate new frames
 # with the deepfake applied
@@ -115,7 +115,7 @@ Use a deepfake model like DeepFaceLab or Faceswap to train on the aligned faces.
 ### Step 7: Combine Frames into a Video
 
 Finally, combine the generated deepfake frames back into a video using OpenCV.
-```python 
+```python
 def create_video(frame_folder, output_video):
     images = sorted([img for img in os.listdir(frame_folder) if img.endswith(".jpg")])
     frame = cv2.imread(os.path.join(frame_folder, images[0]))
@@ -128,7 +128,6 @@ def create_video(frame_folder, output_video):
 
     cv2.destroyAllWindows()
     video.release()
-
 # Example usage
 create_video("deepfake_frames", "deepfake_video.avi")
 ```
